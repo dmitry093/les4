@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?scenebuilder-stylesheet /css/Style.css ?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import java.net.URL?>
+<VBox alignment="center" fx:controller="chat.ChatController" xmlns:fx="http://javafx.com/fxml/1"
+      xmlns="http://javafx.com/javafx/8.0.121">
+    <stylesheets>
+        <URL value="@/css/Style.css"/>
+    </stylesheets>
+    <TextArea fx:id="textArea" editable="false" VBox.vgrow="ALWAYS"/>
+    <HBox>
+        <TextField fx:id="textField" onAction="#sendMsg" promptText="Ведите сообщение..." HBox.hgrow="ALWAYS"/>
+        <Button fx:id="buttonSend" onAction="#sendMsg" text="Отправить"/>
+    </HBox>
+    <HBox>
+        <ToggleButton fx:id="buttonBold" onAction="#setFontProperties" text="B"/>
+        <ToggleButton fx:id="buttonItalic" onAction="#setFontProperties" text="I"/>
+        <TextField fx:id="fontSizeField" onAction="#setFontProperties"/>
+        <ChoiceBox fx:id="fontFamilies" onAction="#setFontProperties"/>
+    </HBox>
+</VBox>
