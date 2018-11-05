@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.VBox?>
+<?import java.net.URL?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Button?>
+
+<?scenebuilder-stylesheet /css/Style.css ?>
+
+<VBox alignment="center" fx:controller="sample.Controller" xmlns:fx="http://javafx.com/fxml/1"
+      xmlns="http://javafx.com/javafx/8.0.121">
+    <stylesheets>
+        <URL value="@/css/Style.css"/>
+    </stylesheets>
+    <TextArea fx:id="textArea" editable="false" VBox.vgrow="ALWAYS"/>
+    <HBox>
+        <TextField fx:id="textField" onAction="#sendMsg" promptText="Ведите сообщение..." HBox.hgrow="ALWAYS"/>
+        <Button fx:id="button" onAction="#sendMsg" text="Отправить"/>
+    </HBox>
+</VBox>

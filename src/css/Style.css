@@ -1,0 +1,13 @@
+#button {
+    -fx-font: 14px "serif";
+    -fx-padding: 2;
+    -fx-background-color: blueviolet;
+    -fx-text-fill: green;
+}
+
+#button:hover {
+    fx-font: 14px "serif";
+    -fx-padding: 2;
+    -fx-background-color: red;
+    -fx-text-fill: chocolate;
+}
